@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/unitedsolutions/ng-validify.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/unitedsolutions/ng-validify/issues"
   },
   "author": "Dmitriy A. Nesterkin",
   "license": "MIT",
