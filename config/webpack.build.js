@@ -50,8 +50,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.ts$/,
-      loader: 'awesome-typescript-loader',
-      exclude: [/\.spec\.ts$/]
+      loader: 'awesome-typescript-loader'
     }]
   },
 
