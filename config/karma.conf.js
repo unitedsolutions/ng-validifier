@@ -3,7 +3,7 @@
 let testWebpackConfig = require('./webpack.test');
 
 module.exports = function(config) {
-  let configuration = {
+  config.set({
     basePath: '',
     
     frameworks: ['jasmine'],
@@ -37,7 +37,5 @@ module.exports = function(config) {
     ],
 
     singleRun: true
-  };
-
-  config.set(configuration);
+  });
 };

@@ -24,7 +24,7 @@ export default (control, dependencyNames) => {
   
   _.each(dependencyNames, dependencyName => {
     if((dependentRecords || []).indexOf(dependencyName) !== -1) {
-      throw new Error(`form controls [${controlName}] and [${dependencyName}] depend on each other`);
+      throw new Error(`[${controlName}] and [${dependencyName}] depend on each other`);
     }
     
     let dependencyRecord = table[dependencyName];
