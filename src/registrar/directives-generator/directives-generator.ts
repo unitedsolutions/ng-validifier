@@ -6,7 +6,9 @@ import {NG_VALIDATORS, NG_ASYNC_VALIDATORS} from '@angular/forms';
 export default validators => {
   return validators.map(validatorConfigurator => {
     let {async: _async, checkbox, validatorNamePrefixed} = validatorConfigurator;
-    let selector = selectorAssembler(validatorNamePrefixed, checkbox);
+    let {directiveNamePrefixed} = validatorConfigurator;
+    let directiveName = directiveNamePrefixed || validatorNamePrefixed;
+    let selector = selectorAssembler(directiveName, checkbox);
 
     let providers = [{
       provide: _async ? NG_ASYNC_VALIDATORS : NG_VALIDATORS,
@@ -19,7 +21,7 @@ export default validators => {
       private onChange;
       private control;
     
-      @Input(`${validatorNamePrefixed}`) private configs;
+      @Input(`${directiveName}`) private configs;
     
       constructor(private el: ElementRef) {}
     
@@ -37,7 +39,7 @@ export default validators => {
       }
     
       validate(control?) {
-        let error = {[validatorNamePrefixed]: true};
+        let error = {[directiveName]: true};
         
         _.extend(this, {
           control, 
