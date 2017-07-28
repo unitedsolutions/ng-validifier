@@ -1,5 +1,5 @@
 import * as _            from 'lodash';
-import moduleInitializer from '../_lib/module-initializer';
+import moduleInitializer from '../../_lib/module-initializer';
 import Component         from './_components/component-sync';
 
 describe('validation :: sync validators :: invalid result', () => {

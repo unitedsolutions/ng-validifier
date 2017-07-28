@@ -1,5 +1,5 @@
 import * as _            from 'lodash';
-import moduleInitializer from '../_lib/module-initializer';
+import moduleInitializer from '../../_lib/module-initializer';
 import Component         from './_components/component-sync';
 
 describe('validation :: sync validators :: valid result', () => {
@@ -26,7 +26,7 @@ describe('validation :: sync validators :: valid result', () => {
     expect($elContainer.hasClass('d-error-required')).toBe(false);
     expect($elContainer.hasClass('d-error-minLength')).toBe(false);
     expect($elContainer.hasClass('ng-valid')).toBe(true);
-    done();    
+    done();
   });
 
   it('sets approprate non-error classes on an element', async done => {

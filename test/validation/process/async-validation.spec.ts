@@ -1,5 +1,5 @@
-import moduleInitializer from '../_lib/module-initializer';
-import pause             from '../_lib/pause';
+import moduleInitializer from '../../_lib/module-initializer';
+import pause             from '../../_lib/pause';
 import Component         from './_components/component-async';
 
 describe('validation :: async validators', () => {
