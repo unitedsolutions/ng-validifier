@@ -1,3 +1,3 @@
-const dependenciesTable = new WeakMap();
+const dependencyDependentsMap = new WeakMap();
 
-export {dependenciesTable};
+export {dependencyDependentsMap};
