@@ -11,11 +11,12 @@ describe('initialization :: class assignment :: sync validators', () => {
 
   it('places identifying classes on synchronous error elements', async done => {
     let control = await valueSetter('name');
-    let $errors = control.$el.next().children();
-    let $required = $errors.eq(0);
-    let $minLength = $errors.eq(1);
-    expect($required.hasClass('d-error')).toBe(true);
-    expect($minLength.hasClass('d-error-minLength')).toBe(true);
+    let $errorsContainer = control.$el.next();
+    let $required = $errorsContainer.find('.d-error.d-error-required');
+    let $minLength = $errorsContainer.find('.d-error.d-error-minLength');
+    
+    expect($required.length).toBe(1);
+    expect($minLength.length).toBe(1);
     done();
   });
   

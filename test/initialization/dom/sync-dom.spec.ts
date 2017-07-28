@@ -23,9 +23,11 @@ describe('initialization :: elements creation :: sync validators', () => {
   
   it('assigns appropriate error message to each error element', async done => {
     let control = await valueSetter('name');
-    let $errors = control.$el.next().children();
-    expect($errors.eq(0).text()).toMatch(/is required/);
-    expect($errors.eq(1).text()).toMatch(/should be 5 characters/);
+    let $errorsContainer = control.$el.next();
+    let $required = $errorsContainer.find('.d-error-required');
+    let $minLength = $errorsContainer.find('.d-error-minLength');
+    expect($required.text()).toMatch(/is required/);
+    expect($minLength.text()).toMatch(/should be 5 characters/);
     done();
   });
 });
