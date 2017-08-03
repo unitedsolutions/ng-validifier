@@ -1,6 +1,6 @@
 import * as _            from 'lodash';
 import moduleInitializer from '../../_lib/module-initializer';
-import Component         from '../_component/component';
+import Component         from '../initialization.component';
 
 describe('initialization :: progress class assignment :: async validators', () => {
   let valueSetter, configs;

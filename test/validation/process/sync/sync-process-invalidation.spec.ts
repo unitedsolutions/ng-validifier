@@ -1,6 +1,6 @@
 import * as _            from 'lodash';
-import moduleInitializer from '../../_lib/module-initializer';
-import Component         from './_components/component-sync';
+import moduleInitializer from '../../../_lib/module-initializer';
+import Component         from './sync-process.component';
 
 describe('validation :: sync validators :: invalid result', () => {
   let valueSetter, configs;
