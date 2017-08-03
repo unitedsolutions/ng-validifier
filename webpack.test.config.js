@@ -1,10 +1,4 @@
-/**
- * Adapted from angular2-webpack-starter
- */
-
-const helpers = require('./helpers');
-const webpack = require('webpack');
-// adapted from angular2-webpack-starter
+let webpack = require('webpack');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -12,7 +6,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     modules: [
-      helpers.root('src'), 
+      './src',
       'node_modules'
     ]
   },
@@ -27,18 +21,16 @@ module.exports = {
         inlineSourceMap: true,
         module: "commonjs",
         removeComments: true
-      },
-      exclude: [/\.e2e\.ts$/]
+      }
     }]
   },
 
   plugins: [
     // fix the warning in ./~/@angular/core/src/linker/system_js_ng_module_factory_loader.js
-    new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)@angular/,
-      helpers.root('./src')
-    )
+    new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, './src')
   ],
 
-  performance: {hints: false}
+  performance: {
+    hints: false
+  }
 };

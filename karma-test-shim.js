@@ -1,5 +1,3 @@
-// adapted from angular2-webpack-starter
-
 Error.stackTraceLimit = Infinity;
 
 require('core-js/es6');
@@ -22,7 +20,7 @@ testing.TestBed.initTestEnvironment(
   browser.platformBrowserDynamicTesting()
 );
 
-var testContext = require.context('../test', true, /\.spec\.ts/);
+var testContext = require.context('./test', true, /\.spec\.ts/);
 
 function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
