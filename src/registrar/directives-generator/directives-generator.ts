@@ -44,7 +44,7 @@ export default validators => {
         _.extend(this, {
           control, 
           validate() { 
-            return this.validator()
+            return this.validator();
           }
         });
         

@@ -7,7 +7,7 @@ import errorGenerator      from './error-generator/error-generator';
 import validatorBuilder    from './validator-builder/validator-builder';
 
 export default validatorDeclaration => {
-  let dataNames = ['async', 'checkbox', 'validatorName', 'directiveNamePrefixed', 'validatorNamePrefixed'];
+  let dataNames = ['async', 'checkbox', 'validatorName', 'directiveNamePrefixed', 'validatorNamePrefixed', 'messager'];
   let supplementalData = _.pick(validatorDeclaration, dataNames);
   let configurator = (control, configs, el) => {
     dataInitializer(control, el);

@@ -1,10 +1,12 @@
 import $               from 'jquery';
 import _               from 'lodash';
+import {Validators}    from '@angular/forms';
 import {settings}      from '../../../_lib/vars';
 import classIdAssigner from '../_lib/class-id-assigner';
 
 export default (control, configs, validatorDeclaration) => {
-  let {validatorName, messager, async: _async} = validatorDeclaration;
+  let {validatorName, validatorNamePrefixed, async: _async} = validatorDeclaration;
+  let {messager} = Validators[validatorNamePrefixed];
   let {elements, errors} = control.validify;
   let baseErrorConfigs = {$el: $(), _async, validatorName, control};
   
