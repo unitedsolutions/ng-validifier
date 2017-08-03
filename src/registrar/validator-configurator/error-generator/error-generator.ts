@@ -38,5 +38,5 @@ export default (control, configs, validatorDeclaration) => {
     errors[validatorName] = errorConfigs;
   }
 
-  $el.text(errorMessage);
+  $el.html(errorMessage);
 };

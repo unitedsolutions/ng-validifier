@@ -1,4 +1,4 @@
-import moduleInitializer from '../../../_lib/module-initializer';
+import moduleInitializer from '../../_lib/module-initializer';
 import Component         from './messager-override.component';
 
 describe('misc :: messagers :: override', () => {
