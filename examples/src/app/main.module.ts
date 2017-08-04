@@ -1,15 +1,12 @@
-import {NgModule}      from '@angular/core';
-import {RouterModule}  from '@angular/router';
-import {CommonModule}  from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule}   from '@angular/forms';
-
-import * as validifyApi from '../../../dist/ng-validify.umd';
-import ValidatorsModule from './_validators/validators.module';
-import {MainComponent} from './main/main.component';
-import {LoginComponent} from './login/login.component';
+import {NgModule}             from '@angular/core';
+import {RouterModule}         from '@angular/router';
+import {BrowserModule}        from '@angular/platform-browser';
+import {FormsModule}          from '@angular/forms';
+import ValidatorsModule       from './_validators/validators.module';
+import {MainComponent}        from './main/main.component';
+import {LoginComponent}       from './login/login.component';
 import {SetPasswordComponent} from './set-password/set-password.component';
-import {SignUpComponent} from './sign-up/sign-up.component';
+import {SignUpComponent}      from './sign-up/sign-up.component';
 
 const routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -21,7 +18,6 @@ const routes = [
 @NgModule({
   imports: [
     BrowserModule,
-    CommonModule,
     FormsModule,
     ValidatorsModule,
     RouterModule.forRoot(routes)
