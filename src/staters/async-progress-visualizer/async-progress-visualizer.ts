@@ -16,7 +16,7 @@ export default class {
     
     _.extend(this, {
       $el, $elContainer, asyncs, pendingClass,
-      hiddenClass: settings.asyncStatusClasses.hidden
+      hiddenClass: settings.asyncStatusHideClass
     });
   }
   

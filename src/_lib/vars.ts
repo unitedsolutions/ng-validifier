@@ -22,11 +22,7 @@ const settings = {
 
   asyncDebounceTime: 500,
 
-  asyncStatusClasses: {
-    hidden: 'hidden',
-    pending: 'alert alert-info',
-    success: 'alert alert-success'
-  },
+  asyncStatusHideClass: 'hidden',
   
   asyncSuccessMessageDuration: 1000
 };

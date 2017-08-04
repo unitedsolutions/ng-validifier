@@ -31,16 +31,15 @@ describe('validation :: async validators', () => {
   });
 
   it('displays pending status when async validator is running', async done => {
-    let {hidden: hiddenClass} = configs.asyncStatusClasses;
+    let {asyncStatusHideClass} = configs;
     let control = await valueSetter('email', 'dmitriy@dmitriy');
     let $asyncs = control.$el.prev().children();
     let $pending = $asyncs.eq(0);
-    expect($pending.hasClass(hiddenClass)).toBe(false);
+    expect($pending.hasClass(asyncStatusHideClass)).toBe(false);
     done();
   });
   
   it('assigns pending classes to element container and element when async is running', async done => {
-    let {hidden: hiddenClass} = configs.asyncStatusClasses;
     let control = await valueSetter('email', 'dmitriy@dmitriy');
     let {$el, $elContainer} = control.validify.elements;
     
@@ -54,17 +53,17 @@ describe('validation :: async validators', () => {
   });
   
   it('displays success status message briefly when async validator does not error', async done => {
-    let {hidden: hiddenClass} = configs.asyncStatusClasses;
+    let {asyncStatusHideClass} = configs;
     let control = await valueSetter('email', 'dmitriy@dmitriy.org');
     let $asyncs = control.$el.prev().children();
     let $pending = $asyncs.eq(0);
     let $success = $asyncs.eq(1);
     
     await pause(1000);
-    expect($pending.hasClass(hiddenClass)).toBe(true);
-    expect($success.hasClass(hiddenClass)).toBe(false);
+    expect($pending.hasClass(asyncStatusHideClass)).toBe(true);
+    expect($success.hasClass(asyncStatusHideClass)).toBe(false);
     await pause(1000);
-    expect($success.hasClass(hiddenClass)).toBe(true);
+    expect($success.hasClass(asyncStatusHideClass)).toBe(true);
     
     done();
   });

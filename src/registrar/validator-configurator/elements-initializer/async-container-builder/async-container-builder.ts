@@ -13,7 +13,7 @@ export default (control, validatorDeclaration) => {
     return;
   }
   
-  let {asyncStatusClasses, selectors} = settings;
+  let {asyncStatusHideClass, selectors} = settings;
   let {asyncStatusContainer} = selectors;
   let {$el, $elContainer} = elements;
   let $asyncsContainer = $('<div/>');
@@ -24,9 +24,9 @@ export default (control, validatorDeclaration) => {
   classIdAssigner($pending, 'async-pending', controlName);
   classIdAssigner($success, 'async-success', controlName);
   
-  $asyncsContainer.addClass(asyncStatusClasses.hidden);
-  $pending.addClass(asyncStatusClasses.hidden).addClass(asyncStatusClasses.pending);
-  $success.addClass(asyncStatusClasses.hidden).addClass(asyncStatusClasses.success);
+  $asyncsContainer.addClass(asyncStatusHideClass);
+  $pending.addClass(asyncStatusHideClass);
+  $success.addClass(asyncStatusHideClass);
   $asyncsContainer.append($pending).append($success);
   
   _.extend(asyncs, {$asyncsContainer, $pending, $success});

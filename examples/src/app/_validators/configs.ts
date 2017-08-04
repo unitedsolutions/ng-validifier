@@ -20,11 +20,7 @@ export default {
 
   asyncDebounceTime: 500,
 
-  asyncStatusClasses: {
-    hidden: 'hidden',
-    pending: 'async-pending',
-    success: 'async-success'
-  },
+  asyncStatusHideClass: 'hidden',
 
   asyncSuccessMessageDuration: 2000
 };

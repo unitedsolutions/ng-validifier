@@ -29,22 +29,4 @@ describe('initialization :: progress class assignment :: async validators', () =
     expect($success.hasClass('d-async-success-email')).toBe(true);
     done();
   });
-  
-  it('assigns user-specified classes to async progress elements', async done => {
-    let control = await valueSetter('email', 'dmitriy@dmitriy');
-    let $progressElements = control.$el.prev().children();
-    let $pending = $progressElements.eq(0);
-    let $success = $progressElements.eq(1);
-    let {pending, success} = configs.asyncStatusClasses;
-    let $els = {$pending, $success};
-    
-    _.each({pending, success}, (classes, handle) => {
-      let $el = $els['$' + handle];
-      _.compact(classes.split(/\s+/)).forEach(klass => {
-        expect($el.hasClass(klass)).toBe(true);
-      });
-    });
-    
-    done();
-  });
 });

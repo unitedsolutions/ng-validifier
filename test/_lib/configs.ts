@@ -20,15 +20,7 @@ export default {
 
   asyncDebounceTime: 0,
 
-  asyncStatusClasses: {
-    hidden: 'hidden',
-    pending: 'alert alert-info',
-    success: 'alert alert-success'
-  },
-
-  asyncPendingMessage: 'checking...',
-  
-  asyncSuccessMessage: 'checks ok!',
+  asyncStatusHideClass: 'hidden',
 
   asyncSuccessMessageDuration: 1000
 };
