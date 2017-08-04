@@ -1,4 +1,4 @@
-import _        from 'lodash';
+import * as _   from 'lodash';
 import prefixer from '../_lib/prefixer';
 
 export default validators => {

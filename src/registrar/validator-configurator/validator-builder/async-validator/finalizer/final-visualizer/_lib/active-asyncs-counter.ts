@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import * as _ from 'lodash';
 
 export default asyncStatuses => {
   return _.reduce(asyncStatuses, (count, status) => {

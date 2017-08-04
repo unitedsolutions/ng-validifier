@@ -1,5 +1,5 @@
-import $                from 'jquery';
-import _                from 'lodash';
+import * as $           from 'jquery';
+import * as _           from 'lodash';
 import nameAssigner     from './name-assigner/name-assigner';
 import ValidationStater from '../../../staters/validation-stater/validation-stater';
 

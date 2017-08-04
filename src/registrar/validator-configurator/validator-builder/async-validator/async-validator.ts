@@ -1,4 +1,4 @@
-import _                          from 'lodash';
+import * as _                     from 'lodash';
 import {settings}                 from '../../../../_lib/vars';
 import validationStatusNormalizer from '../_lib/validation-status-normalizer';
 import initialDataSetter          from './initializer/initial-data-setter/initial-data-setter';

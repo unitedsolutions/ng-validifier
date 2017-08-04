@@ -1,5 +1,5 @@
-import $                       from 'jquery';
-import _                       from 'lodash';
+import * as $                  from 'jquery';
+import * as _                  from 'lodash';
 import {settings}              from '../../../../_lib/vars';
 import classIdAssigner         from '../../_lib/class-id-assigner';
 import containerAdder          from '../_lib/container-adder';

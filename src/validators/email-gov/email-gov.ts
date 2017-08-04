@@ -9,7 +9,7 @@ export default {
   },
   
   messager(control) {
-    return `${control.controlNameProper} is not a valid email`;
+    return `${control.controlNameProper} is not a valid government email`;
   },
   
   validatorName

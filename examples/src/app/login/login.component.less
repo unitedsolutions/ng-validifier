@@ -1,0 +1,40 @@
+.login-form {
+  .v-error {
+    color: #A40202;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+  }
+
+  .inactive-error {
+    opacity: 0;
+  }
+
+  .active-error {
+    opacity: 1;
+  }
+  
+  .v-errors-container {
+    position: relative;
+  }
+
+  .v-el-container {
+    &.ng-pristine .v-errors-container {
+      .active-error {
+        opacity: 0;
+      }
+    }
+    
+    &.ng-dirty .v-errors-container {
+      .active-error ~ .active-error {
+        opacity: 0;
+        transition-duration: .2s;
+      }
+    }
+  }
+  
+  .control-name {
+    display: none;
+  }
+}

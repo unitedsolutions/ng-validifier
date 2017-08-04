@@ -1,4 +1,4 @@
-import _                   from 'lodash';
+import * as _              from 'lodash';
 import dataInitializer     from './data-initializer/data-initializer';
 import dependentsRegistrar from './dependents-registrar/dependents-registrar';
 import preprocessor        from './preprocessor/preprocessor';

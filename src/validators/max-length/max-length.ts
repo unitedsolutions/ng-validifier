@@ -2,7 +2,8 @@ const validatorName = 'maxLength';
 
 export default {
   validator(control, maxLength) {
-    if(control.value.length > maxLength) {
+    let {value} = control;
+    if(!value || value.length > maxLength) {
       return {[validatorName]: true};
     }
   },

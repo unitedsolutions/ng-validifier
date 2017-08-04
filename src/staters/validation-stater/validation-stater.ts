@@ -1,4 +1,4 @@
-import _                 from 'lodash';
+import * as _            from 'lodash';
 import _constructor      from './_constructor/constructor';
 import stateSetter       from './state-setter/state-setter';
 import dependentsUpdater from './dependents-updater/dependents-updater';

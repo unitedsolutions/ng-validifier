@@ -1,4 +1,4 @@
-import _                 from 'lodash';
+import * as _            from 'lodash';
 import selectorAssembler from './_lib/selector-assembler';
 import {Directive, Input, forwardRef, ElementRef} from '@angular/core';
 import {NG_VALIDATORS, NG_ASYNC_VALIDATORS} from '@angular/forms';

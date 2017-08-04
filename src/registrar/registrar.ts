@@ -15,5 +15,14 @@ export default (validators?) => {
     exports: directives
   }) class ValidatorModule {}
   
-  return ValidatorModule;
+  return class {
+    static annotations = [
+      new NgModule({
+        declarations: directives, 
+        exports: directives
+      })
+    ];
+  }
+  
+  //return ValidatorModule;
 };

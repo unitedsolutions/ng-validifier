@@ -1,0 +1,28 @@
+<div class = "alert alert-warning w-75 mx-auto">
+  Login example illustrates validation with error messages displayed one at
+  a time.  The error notifications are displayed only if the field is "dirty."
+  All transition/animation effects are handled through CSS.
+</div>
+<form class = "login-form w-75 mx-auto mt-3" #f = "ngForm" novalidate>
+  <h4 class = "text-center mb-4">Login</h4>
+  <div class="form-group">
+    <div class = "row">
+      <label class = "col col-md-auto">Email</label>
+      <div class = "col text-right errors"></div>
+    </div>
+    <input name = "email" type="email" class="form-control" ngModel
+     placeholder="Enter government email" autocomplete = "off" vRequired vEmailGov>
+  </div>
+  <div class="form-group">
+    <div class = "row">
+      <label class = "col col-md-auto">Password</label>
+      <div class = "col text-right errors"></div>
+    </div>
+    <input ngModel vRequired name = "password" type="password" vRequired
+     vMinLength = "8" vMaxLength = "10" class="form-control" 
+     placeholder="Provide password" autocomplete = "off">
+  </div>
+  <button [disabled] = "f.invalid" type="submit" class="btn btn-primary btn-block">
+    <strong>Login</strong>
+  </button>
+</form>

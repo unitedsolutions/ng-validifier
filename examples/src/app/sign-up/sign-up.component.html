@@ -1,0 +1,26 @@
+<div class = "alert alert-warning w-75 mx-auto">
+  <p>
+    Sign up example illustrates usage of asynchronous validators.  The use case
+    also shows how to setup visual elements to communicate that the async validator
+    is waiting for server-side evaluation results.    
+  </p>
+  <p>
+    The only valid email address that should make async validator error out is
+    <strong>example@example.com</strong>.
+  </p>
+</div>
+<form class = "sign-up-form w-75 mx-auto mt-3" #f = "ngForm" novalidate>
+  <h4 class = "text-center mb-4">Sign Up</h4>
+  <div class="form-group">
+    <div class = "row">
+      <label class = "col col-md-auto">Email</label>
+      <div class = "col text-right errors"></div>
+    </div>
+    <input name = "email" type="email" class="form-control" ngModel
+     placeholder="Enter valid email" autocomplete = "off" vEmail 
+     vUniqueEmailChecker>
+  </div>
+  <button [disabled] = "f.invalid" type="submit" class="btn btn-primary btn-block">
+    <strong>Sign up for newsletter</strong>
+  </button>
+</form>

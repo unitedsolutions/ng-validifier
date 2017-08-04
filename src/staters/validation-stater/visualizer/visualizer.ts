@@ -1,4 +1,4 @@
-import _                from 'lodash';
+import * as _           from 'lodash';
 import delayCalculator  from './_lib/delay-calculator';
 import errorsVisualizer from './errors-visualizer/errors-visualizer';
 

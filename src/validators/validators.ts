@@ -10,12 +10,12 @@ import requiredTrueValidator from './required-true/required-true';
 
 export default [
   depsValidator,
+  requiredValidator,
+  minLengthValidator,
+  maxLengthValidator,
+  patternValidator,
   emailValidator,
   emailGovValidator,
   equalsToValidator,
-  maxLengthValidator,
-  minLengthValidator,
-  patternValidator,
-  requiredValidator,
   requiredTrueValidator
 ];

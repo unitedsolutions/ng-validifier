@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import * as _ from 'lodash';
 
 export default (control, validatorName, validationId) => {
   let {requests} = control.validify.errors[validatorName];
