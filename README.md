@@ -17,4 +17,5 @@ result in a leaner code that is more aligned with a software's purpose and
 identity. 
 
 To learn more about the framework, consult the [documentation]() (*coming soon*).
-To get started with ng-validify, visit [ng-validify-tutorial]() project (*coming soon*).
+To get started with ng-validify, visit [ng-validify-tutorial]() project (*coming soon*)
+or see the [examples](./examples/).
