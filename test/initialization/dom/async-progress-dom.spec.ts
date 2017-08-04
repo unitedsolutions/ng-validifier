@@ -20,14 +20,4 @@ describe('initialization :: progress elements creation :: async validators', () 
     expect(control.$el.prev().children().length).toBe(2);
     done();
   });
-  
-  it('adds appropriate async status messages', async done => {
-    let control = await valueSetter('email', 'dmitriy@dmitriy');
-    let $statuses = control.$el.prev().children();
-    let $pending = $statuses.eq(0);
-    let $success = $statuses.eq(1);
-    expect($pending.text()).toBe('checking...');
-    expect($success.text()).toBe('checks ok!');
-    done();
-  });
 });

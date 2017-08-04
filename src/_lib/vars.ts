@@ -27,11 +27,7 @@ const settings = {
     pending: 'alert alert-info',
     success: 'alert alert-success'
   },
-
-  asyncPendingMessage: 'checking...',
   
-  asyncSuccessMessage: 'checks ok!',
-
   asyncSuccessMessageDuration: 1000
 };
 

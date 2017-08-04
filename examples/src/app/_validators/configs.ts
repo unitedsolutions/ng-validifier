@@ -26,9 +26,5 @@ export default {
     success: 'async-success'
   },
 
-  asyncPendingMessage: '',
-  
-  asyncSuccessMessage: '',
-
   asyncSuccessMessageDuration: 2000
 };

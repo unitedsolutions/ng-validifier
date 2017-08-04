@@ -8,7 +8,6 @@ import AsyncProgressVisualizer from '../../../../staters/async-progress-visualiz
 export default (control, validatorDeclaration) => {
   let {validify, controlName} = control;
   let {asyncs = {}, elements} = validify;
-  let {asyncPendingMessage, asyncSuccessMessage} = settings; 
   
   if(!validatorDeclaration.async || !_.isEmpty(asyncs)) {
     return;
@@ -28,8 +27,6 @@ export default (control, validatorDeclaration) => {
   $asyncsContainer.addClass(asyncStatusClasses.hidden);
   $pending.addClass(asyncStatusClasses.hidden).addClass(asyncStatusClasses.pending);
   $success.addClass(asyncStatusClasses.hidden).addClass(asyncStatusClasses.success);
-  $pending.text(asyncPendingMessage);
-  $success.text(asyncSuccessMessage);
   $asyncsContainer.append($pending).append($success);
   
   _.extend(asyncs, {$asyncsContainer, $pending, $success});
