@@ -10,9 +10,9 @@ const settings = {
   },
   
   errorMessageClasses: {
-    initial: 'valid',
-    valid: 'hidden',
-    invalid: 'alert alert-danger'
+    initial: '',
+    valid: '',
+    invalid: ''
   },
 
   errorMessageDelays: {

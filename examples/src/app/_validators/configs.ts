@@ -8,9 +8,7 @@ export default {
   },
   
   errorMessageClasses: {
-    initial: 'valid',
-    valid: 'inactive-error',
-    invalid: 'active-error'
+    initial: 'ng-valid'
   },
 
   errorMessageDelays: {

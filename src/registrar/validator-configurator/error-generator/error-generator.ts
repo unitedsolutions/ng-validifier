@@ -18,18 +18,21 @@ export default (control, configs, validatorDeclaration) => {
   let {$el} = errorConfigs;
   let {validator: validatorConfigs, messager: messagerConfigs} = configs;
   let {errorMessageClasses, prefix} = settings;
-  let initialClass = errorMessageClasses[errorMessageClasses.initial];
   let {$errorsContainer} = elements;
   let errorMessager = _.isFunction(messager) ? messager : () => messager;
   let errorMessage = errorMessager(control, validatorConfigs, messagerConfigs);
-  let syncAsyncClass = `${prefix}-` + (_async ? 'async' : 'sync');
   
   if(!$el.length) {
+    let syncAsyncClass = `${prefix}-` + (_async ? 'async' : 'sync');
     $el = $('<div/>');
-    $el.addClass(initialClass).addClass(syncAsyncClass);
+    $el.addClass(syncAsyncClass);
     $errorsContainer.append($el);
     classIdAssigner($el, 'error', validatorName);
     errorConfigs = _.extend(errorConfigs, {$el});
+    
+    if(errorMessageClasses && errorMessageClasses.initial) {
+      $el.addClass(errorMessageClasses.initial);
+    }
     
     if(_async) {
       errorConfigs.requests = {};

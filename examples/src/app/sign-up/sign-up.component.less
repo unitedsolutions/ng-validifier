@@ -19,11 +19,11 @@
     transition: opacity 0.4s linear;
   }
 
-  .inactive-error {
+  .v-error.ng-valid {
     opacity: 0;
   }
 
-  .active-error {
+  .v-error.ng-invalid {
     opacity: 1;
   }
   
@@ -33,13 +33,13 @@
 
   .v-el-container {
     &.ng-pristine .v-errors-container {
-      .active-error {
+      .ng-invalid {
         opacity: 0;
       }
     }
     
     &.ng-dirty .v-errors-container {
-      .active-error ~ .active-error {
+      .ng-invalid ~ .ng-invalid {
         opacity: 0;
         transition-duration: .2s;
       }
