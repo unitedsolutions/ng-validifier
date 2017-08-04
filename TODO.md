@@ -1,9 +1,9 @@
 # TODOs
 
-* 08-04-2017: Some error classes and async classes may not be necessary (see if they can be removed)
 * 08-03-2017: Refactor sync validation process tests
 * 07-24-2017: Create documentation
 * 07-24-2017: Write tutorial
+* **done** 08-04-2017: Some error classes and async classes may not be necessary (see if they can be removed)
 * **done** 07-28-2017: Think about not clearing the errors when async is running but let user do it through CSS (keep as is for now)
 * **done** 07-24-2017: Include examples
 * **done** 07-25-2017: Test validation result and classes for async validators
