@@ -1,7 +1,7 @@
 import * as $          from 'jquery';
 import * as _          from 'lodash';
 import classIdAssigner from '../_lib/class-id-assigner';
-import spannifier       from './_lib/spannifier';
+import spannifier      from './_lib/spannifier';
 
 export default (settings, control, configs, validatorDeclaration) => {
   let {validatorName, validatorNamePrefixed, async: _async} = validatorDeclaration;
