@@ -1,6 +1,7 @@
 import * as $          from 'jquery';
 import * as _          from 'lodash';
 import classIdAssigner from '../_lib/class-id-assigner';
+import spanifier       from './_lib/spanifier';
 
 export default (settings, control, configs, validatorDeclaration) => {
   let {validatorName, validatorNamePrefixed, async: _async} = validatorDeclaration;
@@ -19,6 +20,7 @@ export default (settings, control, configs, validatorDeclaration) => {
   let {$errorsContainer} = elements;
   let errorMessager = _.isFunction(messager) ? messager : () => messager;
   let errorMessage = errorMessager(control, validatorConfigs, messagerConfigs);
+  errorMessage = spanifier(errorMessage, prefix);
   
   if(!$el.length) {
     let syncAsyncClass = `${prefix}-` + (_async ? 'async' : 'sync');
