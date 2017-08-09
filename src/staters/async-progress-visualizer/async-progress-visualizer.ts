@@ -1,5 +1,4 @@
-import * as _     from 'lodash';
-import {settings} from '../../_lib/vars';
+import * as _ from 'lodash';
 
 export default class {
   private hiddenClass;
@@ -8,11 +7,10 @@ export default class {
   private $elContainer;
   private pendingClass;
   
-  constructor(control) {
-    let {prefix} = settings;
+  constructor(settings, control) {
     let {asyncs, elements} = control.validify;
     let {$el, $elContainer} = elements;
-    let pendingClass = `${prefix}-async-pending`;
+    let pendingClass = `${settings.prefix}-async-pending`;
     
     _.extend(this, {
       $el, $elContainer, asyncs, pendingClass,

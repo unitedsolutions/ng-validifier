@@ -1,8 +1,12 @@
 # TODOs
 
+* 08-09-2017: Add spans around words in messagers
+* 08-09-2017: remove adding validators to Validators in angular/forms
+* 08-09-2017: remove configurator, add settings with registrar
 * 08-03-2017: Refactor sync validation process tests
 * 07-24-2017: Create documentation
 * 07-24-2017: Write tutorial
+* **done** 08-08-2017: Think about creating injectable service to configure the module
 * **done** 08-04-2017: Some error classes and async classes may not be necessary (see if they can be removed)
 * **done** 07-28-2017: Think about not clearing the errors when async is running but let user do it through CSS (keep as is for now)
 * **done** 07-24-2017: Include examples

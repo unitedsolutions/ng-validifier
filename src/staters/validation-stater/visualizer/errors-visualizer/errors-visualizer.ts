@@ -1,7 +1,6 @@
-import {settings}    from '../../../../_lib/vars';
 import errorsCounter from './_lib/errors-counter';
 
-export default errorConfigs => {
+export default (settings, errorConfigs) => {
   let {validatorName, status: validationStatus} = errorConfigs;
   let {$el: $errorEl, _async, control} = errorConfigs;
   let {errorMessageClasses, prefix} = settings;
@@ -37,7 +36,7 @@ export default errorConfigs => {
   $elContainer.removeClass(errorClass);
   $el.removeClass(errorClass);
 
-  if(!errorsCounter($elContainer)) {
+  if(!errorsCounter(settings, $elContainer)) {
     $elContainer.removeClass('ng-invalid').addClass('ng-valid');
     $elContainer.removeClass(_async ? asyncClass : syncClass);
   }

@@ -1,26 +1,21 @@
-import * as _                    from 'lodash';
-import {TestBed}                 from '@angular/core/testing';
-import {FormsModule, Validators} from '@angular/forms';
-import {ReactiveFormsModule}     from '@angular/forms';
-import * as ngValidifyApi        from '../../dist/ng-validify.umd.js';
-import asyncEmailValidator       from '../_validators/async-email';
-import configs                   from './configs';
-import pause                     from './pause';
-import _valueSetter              from './value-setter';
+import * as _                from 'lodash';
+import {TestBed}             from '@angular/core/testing';
+import {FormsModule}         from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
+import * as ngValidifyApi    from '../../dist/ng-validify.umd.js';
+import asyncEmailValidator   from '../_validators/async-email';
+import configs               from './configs';
+import pause                 from './pause';
+import _valueSetter          from './value-setter';
 
-const {ngValidifyConfigurator, ngValidifyRegistrar} = ngValidifyApi;
+const {ngValidifyConfigurator} = ngValidifyApi;
 
-export default async (Component, _configs?, validators = [], messagers = {}) => {
+export default async (Component, _configs?, validators = []) => {
   _configs = _.extend({}, configs, _configs);
-  ngValidifyConfigurator(_configs);
   validators = validators.concat(asyncEmailValidator);
-  let ValidatorsModule = ngValidifyRegistrar(validators);
+  let ValidatorsModule = ngValidifyConfigurator(_configs, validators);
   let delay = _configs.errorMessageDelays.invalid + 20;
-  
-  _.each(messagers, (messager, validatorNamePrefixed) => {
-    _.extend(Validators[validatorNamePrefixed], {messager});
-  });
-  
+
   TestBed.configureTestingModule({
     imports: [FormsModule, ReactiveFormsModule, ValidatorsModule],
     declarations: [Component]

@@ -6,7 +6,7 @@ export default function() {
   if(!this.silent) {
     setTimeout(() => {
       let {control, dependents = [], errorConfigs} = this;
-      let delay = delayCalculator(errorConfigs);
+      let delay = delayCalculator(this.settings, errorConfigs);
       
       clearTimeout(errorConfigs.visualizationTimeout);
       
@@ -16,7 +16,7 @@ export default function() {
           let {validify} = control;
           
           _.extend(validify, {silent: false, ignoreDependents: false});
-          _.each(validify.errors, errorsVisualizer);
+          _.each(validify.errors, _.partial(errorsVisualizer, this.settings, _));
         })
       }, delay);
     });

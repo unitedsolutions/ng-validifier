@@ -1,8 +1,6 @@
-import * as _     from 'lodash';
-import {settings} from '../../../../../_lib/vars';
+import * as _ from 'lodash';
 
-export default $el => {
-  let {prefix} = settings;
+export default (settings, $el) => {
   let classes = $el.attr('class');
   
   if(classes) {
@@ -10,7 +8,7 @@ export default $el => {
   }
 
   return _.reduce(classes, (count, klass) => {
-    if(klass.startsWith(`${prefix}-error`)) {
+    if(klass.startsWith(`${settings.prefix}-error`)) {
       count++;
     }
     
