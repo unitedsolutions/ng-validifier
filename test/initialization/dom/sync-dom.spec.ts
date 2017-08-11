@@ -30,4 +30,13 @@ describe('initialization :: elements creation :: sync validators', () => {
     expect($minLength.text()).toMatch(/should be 5 characters/);
     done();
   });
+  
+  it('breaks an error message into words in span tags', async done => {
+    let control = await valueSetter('name');
+    let $errorsContainer = control.$el.next();
+    let $required = $errorsContainer.find('.d-error-required');
+    let $spans = $required.find('span');
+    expect($spans.length).toBe(3);
+    done();
+  });
 });
