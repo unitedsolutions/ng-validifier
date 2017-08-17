@@ -1,4 +1,4 @@
-# ng-validify examples
+# ng-validifier examples
 
 To run examples, do the following steps:
 
