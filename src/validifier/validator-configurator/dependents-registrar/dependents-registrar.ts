@@ -1,5 +1,5 @@
-import dependentsSetter     from '../../../_lib/dependents-setter';
 import {dependencyRequests} from '../../../_lib/vars';
+import dependentsSetter     from '../../../dependents-setter/dependents-setter';
 
 export default control => {
   let {_parent, controlName} = control;

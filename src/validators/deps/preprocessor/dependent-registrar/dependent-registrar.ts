@@ -1,4 +1,4 @@
-import dependentsSetter           from '../../../../_lib/dependents-setter';
+import dependentsSetter           from '../../../../dependents-setter/dependents-setter';
 import dependencyRequestRegistrar from './dependency-request-registrar/dependency-request-registrar';
 
 export default (dependencyName, control) => {
