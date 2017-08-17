@@ -1,20 +1,20 @@
 {
-  "name": "ng-validify",
+  "name": "ng-validifier",
   "version": "0.5.0",
   "description": "Input validation framework for angular applications",
-  "main": "dist/ng-validify.umd",
-  "typings": "dist/typings/ng-validify.d",
-  "module": "src/ng-validify",
+  "main": "dist/ng-validifier.umd",
+  "typings": "dist/typings/ng-validifier.d",
+  "module": "src/ng-validifier",
   "scripts": {
     "build": "webpack",
     "test": "npm run build && karma start"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unitedsolutions/ng-validify.git"
+    "url": "https://github.com/unitedsolutions/ng-validifier.git"
   },
   "bugs": {
-    "url": "https://github.com/unitedsolutions/ng-validify/issues"
+    "url": "https://github.com/unitedsolutions/ng-validifier/issues"
   },
   "author": "Dmitriy A. Nesterkin",
   "license": "MIT",

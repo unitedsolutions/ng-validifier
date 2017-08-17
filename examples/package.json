@@ -39,7 +39,7 @@
     "rxjs": "^5.1.0",
     "tether": "^1.4.0",
     "zone.js": "^0.8.4",
-    "ng-validify": "file:../"
+    "ng-validifier": "git+ssh://git@github.com:unitedsolutions/ng-validifier.git"
   },
   "devDependencies": {
     "@angular/cli": "1.2.0",

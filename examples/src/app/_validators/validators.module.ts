@@ -1,5 +1,5 @@
-import {ngValidifyConfigurator}    from 'ng-validify';
+import {ngValidifier}              from 'ng-validifier';
 import configs                     from './configs';
 import uniqueEmailCheckerValidator from './unique-email-checker';
 
-export default ngValidifyConfigurator(configs, [uniqueEmailCheckerValidator]);
+export default ngValidifier(configs, [uniqueEmailCheckerValidator]);

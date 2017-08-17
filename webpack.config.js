@@ -7,13 +7,13 @@ module.exports = {
     extensions: ['.ts', '.js']
   },
 
-  entry: './src/ng-validify.ts',
+  entry: './src/ng-validifier.ts',
 
   output: {
     path: './dist',
     publicPath: '/',
-    filename: 'ng-validify.umd.js',
-    library: 'ng-validify',
+    filename: 'ng-validifier.umd.js',
+    library: 'ng-validifier',
     libraryTarget: 'umd'
   },
 
