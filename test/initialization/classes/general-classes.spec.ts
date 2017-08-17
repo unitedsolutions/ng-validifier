@@ -9,7 +9,7 @@ describe('initialization :: class assignment :: all validators', () => {
     done();
   });
 
-  it('prefixes ng-validify-assigned classes with specified phrase', async done => {
+  it('prefixes ng-validifier-assigned classes with specified phrase', async done => {
     let control = await valueSetter('name');
     expect(control.$el.hasClass('d-el')).toBe(true);
     done();
