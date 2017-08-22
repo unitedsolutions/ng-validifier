@@ -1,11 +1,11 @@
 # TODOs
 
 * 08-17-2017: Implement in (vIn) validator
-* 08-17-2017: Allow defining persistent validator configs on the global configs
-* 08-17-2017: Create uniqueCheck async validator with endpoint, fieldName, exclude options
 * 08-03-2017: Refactor sync validation process tests
 * 07-24-2017: Create documentation
 * 07-24-2017: Write tutorial
+* **done** 08-17-2017: Allow defining persistent validator configs on the global configs
+* **done** 08-17-2017: Create uniqueCheck async validator with endpoint, fieldName, exclude options
 * **done** 08-17-2017: Change appropriate api function names
 * **done** 08-17-2017: Change name to ng-validifier
 * **done** 08-09-2017: remove configurator, add settings with registrar
