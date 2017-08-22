@@ -1,6 +1,5 @@
 import * as _                from 'lodash';
 import {TestBed}             from '@angular/core/testing';
-import {HttpClientModule}    from '@angular/common/http';
 import {FormsModule}         from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import * as ngValidifierApi  from '../../dist/ng-validifier.umd.js';
@@ -18,7 +17,11 @@ export default async (Component, _configs?, validators = []) => {
   let delay = _configs.errorMessageDelays.invalid + 20;
 
   TestBed.configureTestingModule({
-    imports: [FormsModule, ReactiveFormsModule, ValidatorsModule, HttpClientModule],
+    imports: [
+      FormsModule, 
+      ReactiveFormsModule, 
+      ValidatorsModule
+    ],
     declarations: [Component]
   });
   

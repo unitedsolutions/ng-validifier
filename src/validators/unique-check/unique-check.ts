@@ -1,10 +1,9 @@
-import * as _       from 'lodash';
-import {HttpParams} from '@angular/common/http';
+import * as _ from 'lodash';
 
 const validatorName = 'uniqueCheck';
 
 export default {
-  validator(control, configs) {
+  validator(control, configs, baseConfigs, settings) {
     let {fieldName, ignore, ignoreCase, path} = configs;
     let {value} = control;
 
@@ -16,10 +15,9 @@ export default {
       return Promise.resolve();
     }
 
-    let params = new HttpParams();
-    params = params.append(fieldName, value);
-
     return new Promise((resolve, reject) => {
+      let params = {[fieldName]: value};
+      
       control.http.get(path, {params}).subscribe(data => {
         resolve(data.length ? {[validatorName]: true} : null);
       }, error => {
