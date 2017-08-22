@@ -20,5 +20,11 @@ export default {
 
   asyncStatusHideClass: 'hidden',
 
-  asyncSuccessMessageDuration: 2000
+  asyncSuccessMessageDuration: 2000,
+  
+  validatorConfigs: {
+    uniqueCheck: {
+      baseUrl: 'http://localhost:12321'
+    }
+  }
 };

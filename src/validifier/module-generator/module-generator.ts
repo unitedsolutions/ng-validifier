@@ -1,5 +1,6 @@
 import * as _                from 'lodash';
 import {NgModule}            from '@angular/core';
+import {HttpClientModule}    from '@angular/common/http';
 import prefixer              from '../_lib/prefixer';
 import validatorConfigurator from '../validator-configurator/validator-configurator';
 import directivesGenerator   from '../directives-generator/directives-generator';
@@ -16,6 +17,7 @@ export default (settings, validators) => {
   let directives = directivesGenerator(validators);
 
   @NgModule({
+    imports: [HttpClientModule],
     declarations: directives, 
     exports: directives
   }) class ValidatorModule {}

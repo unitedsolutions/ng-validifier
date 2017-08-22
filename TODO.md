@@ -1,5 +1,6 @@
 # TODOs
 
+* 08-17-2017: Implement in (vIn) validator
 * 08-17-2017: Allow defining persistent validator configs on the global configs
 * 08-17-2017: Create uniqueCheck async validator with endpoint, fieldName, exclude options
 * 08-03-2017: Refactor sync validation process tests

@@ -1,5 +1,6 @@
 import * as _                                     from 'lodash';
 import {Directive, Input, forwardRef, ElementRef} from '@angular/core';
+import {HttpClient}                               from '@angular/common/http';
 import {NG_VALIDATORS, NG_ASYNC_VALIDATORS}       from '@angular/forms';
 import selectorAssembler                          from './_lib/selector-assembler';
 
@@ -20,10 +21,9 @@ export default validators => {
       private validator;
       private onChange;
       private control;
-    
       @Input(`${directiveName}`) private configs;
     
-      constructor(private el: ElementRef) {}
+      constructor(private el: ElementRef, private http: HttpClient) {}
     
       ngOnChanges(changes) {
         if('configs' in changes) {
@@ -41,9 +41,13 @@ export default validators => {
       validate(control?) {
         let error = {[directiveName]: true};
         
+        if(_async) {
+          _.extend(control, {http: this.http})
+        }
+        
         _.extend(this, {
           control, 
-          validate() { 
+          validate() {
             return this.validator();
           }
         });

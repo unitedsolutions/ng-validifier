@@ -15,11 +15,11 @@ export default (settings, control, configs, validatorDeclaration) => {
   
   let errorConfigs = errors[validatorName] || baseErrorConfigs;
   let {$el} = errorConfigs;
-  let {validator: validatorConfigs, messager: messagerConfigs} = configs;
+  let {validator: validatorConfigs, messager: messagerConfigs, baseConfigs} = configs;
   let {errorMessageClasses, prefix} = settings;
   let {$errorsContainer} = elements;
   let errorMessager = _.isFunction(messager) ? messager : () => messager;
-  let errorMessage = errorMessager(control, validatorConfigs, messagerConfigs);
+  let errorMessage = errorMessager(control, validatorConfigs, messagerConfigs, baseConfigs);
   errorMessage = spannifier(errorMessage, prefix);
   
   if(!$el.length) {

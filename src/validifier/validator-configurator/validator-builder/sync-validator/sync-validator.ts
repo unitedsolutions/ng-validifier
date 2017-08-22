@@ -4,7 +4,7 @@ export default (settings, control, configs, validatorDeclaration) => {
   let {validify} = control;
   let {validationStater} = validify;
   let {validator, validatorName} = validatorDeclaration;
-  let validationStatus = validator(control, configs.validator);
+  let validationStatus = validator(control, configs.validator, configs.baseConfigs);
   
   if(validationStatus) {
     validify.sync = true;

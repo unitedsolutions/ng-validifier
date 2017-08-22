@@ -13,7 +13,7 @@ export default (settings, validatorDeclaration) => {
   let configurator = (control, configs, el) => {
     dataInitializer(settings, control, el);
     dependentsRegistrar(control);
-    configs = preprocessor(control, configs, validatorDeclaration);
+    configs = preprocessor(settings, control, configs, validatorDeclaration);
     elementsInitializer(settings, control, validatorDeclaration);
     errorGenerator(settings, control, configs, validatorDeclaration);
     return validatorBuilder(settings, control, configs, validatorDeclaration);

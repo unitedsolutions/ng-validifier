@@ -7,6 +7,7 @@ import minLengthValidator    from './min-length/min-length';
 import patternValidator      from './pattern/pattern';
 import requiredValidator     from './required/required';
 import requiredTrueValidator from './required-true/required-true';
+import uniqueCheckValidator  from './unique-check/unique-check';
 
 export default [
   depsValidator,
@@ -17,5 +18,6 @@ export default [
   emailValidator,
   emailGovValidator,
   equalsToValidator,
-  requiredTrueValidator
+  requiredTrueValidator,
+  uniqueCheckValidator
 ];

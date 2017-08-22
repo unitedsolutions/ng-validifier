@@ -30,6 +30,12 @@ module.exports = {
       commonjs2: 'jquery', 
       amd: 'jquery'
     },
+    '@angular/common/http': {
+      root: ['ng', 'common', 'http'],
+      commonjs: '@angular/common/http',
+      commonjs2: '@angular/common/http',
+      amd: '@angular/common/http'
+    },    
     '@angular/core': {
       root: ['ng', 'core'], 
       commonjs: '@angular/core', 

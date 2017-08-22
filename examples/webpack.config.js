@@ -89,6 +89,7 @@ module.exports = {
     "scripts": [
       "script-loader!./node_modules/jquery/dist/jquery.js",
       "script-loader!./node_modules/tether/dist/js/tether.js",
+      "script-loader!./node_modules/popper.js/dist/umd/popper.js",
       "script-loader!./node_modules/bootstrap/dist/js/bootstrap.js"
     ],
     "styles": styleUrls
