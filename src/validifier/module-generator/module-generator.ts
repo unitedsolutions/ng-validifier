@@ -1,6 +1,6 @@
 import * as _                 from 'lodash';
 import {NgModule}             from '@angular/core';
-import {HttpClientPlusModule} from 'ng-http-plus';
+import {HttpClientPlusModule} from 'ng-http-client-plus';
 import prefixer               from '../_lib/prefixer';
 import validatorConfigurator  from '../validator-configurator/validator-configurator';
 import directivesGenerator    from '../directives-generator/directives-generator';

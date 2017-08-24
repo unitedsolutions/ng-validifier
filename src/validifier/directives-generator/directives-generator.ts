@@ -1,6 +1,6 @@
 import * as _                                     from 'lodash';
 import {Directive, Input, forwardRef, ElementRef} from '@angular/core';
-import {HttpClientPlus}                           from 'ng-http-plus';
+import {HttpClientPlus}                           from 'ng-http-client-plus';
 import {NG_VALIDATORS, NG_ASYNC_VALIDATORS}       from '@angular/forms';
 import selectorAssembler                          from './_lib/selector-assembler';
 
