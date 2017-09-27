@@ -3,8 +3,7 @@
   "version": "0.5.0",
   "description": "Input validation framework for angular applications",
   "main": "dist/ng-validifier.umd",
-  "typings": "dist/typings/ng-validifier.d",
-  "module": "src/ng-validifier",
+
   "scripts": {
     "build": "webpack",
     "test": "npm run build && npm run test-server:start & karma start && npm run test-server:close",
