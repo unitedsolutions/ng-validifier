@@ -3,7 +3,6 @@
   "version": "0.5.0",
   "description": "Input validation framework for angular applications",
   "main": "dist/ng-validifier.umd",
-
   "scripts": {
     "build": "webpack",
     "test": "npm run build && npm run test-server:start & karma start && npm run test-server:close",
@@ -28,16 +27,19 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "lodash": "^4.16.2",
-    "ng-http-client-plus": "git+ssh://git@github.com:unitedsolutions/ng-http-client-plus.git",
-    "@angular/core": "^4.3.6",
-    "@angular/forms": "^4.3.6"
+    "ng-http-client-plus": "git+ssh://git@github.com/unitedsolutions/ng-http-client-plus.git#f77b6b93b3ef2ebb3f7d52ee4ca14d9e8713b091"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=4.3.6",
+    "@angular/forms": ">=4.3.6"
   },
   "devDependencies": {
+    "@angular/core": "^4.3.6",
+    "@angular/forms": "^4.3.6",
     "@angular/common": "^4.3.6",
     "@angular/http": "^4.3.6",
     "@angular/animations": "^4.3.6",
     "@angular/cli": "^1.2.0",
-    "@angular/common": "^4.3.6",
     "@angular/compiler": "^4.3.6",
     "@angular/compiler-cli": "^4.3.6",
     "@angular/platform-browser": "^4.3.6",
