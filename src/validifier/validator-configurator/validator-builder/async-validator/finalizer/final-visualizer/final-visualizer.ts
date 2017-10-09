@@ -10,7 +10,8 @@ export default (settings, control, validatorName, validationStatus) => {
     if(!validationStatus && control.valid) {
       asyncProgressVisualizer.success(true);
       setTimeout(() => {
-        asyncProgressVisualizer.success(false).container(false);
+        asyncProgressVisualizer.success(false);
+        asyncProgressVisualizer.container(false);
       }, settings.asyncSuccessMessageDuration);
     }
   }
