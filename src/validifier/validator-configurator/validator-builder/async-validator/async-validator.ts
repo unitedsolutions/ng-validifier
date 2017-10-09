@@ -34,7 +34,7 @@ export default (settings, control, configs, validatorDeclaration) => {
       return asyncProgressVisualizer.container(false);
     }
     
-    await asyncProgressVisualizer.pending(true);
+    asyncProgressVisualizer.pending(true);
     
     validator(control, configs.validator, configs.baseConfigs).then(validationStatus => {
       if(errorConfigs.requests[validationId]) {
