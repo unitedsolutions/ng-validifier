@@ -11,7 +11,7 @@ export default {
   },
 
   messager(control, validatorConfigs) {
-    return `${control.controlName} must equal to ${validatorConfigs}`;
+    return `${control.controlNameProper} must equal to ${validatorConfigs}`;
   },
 
   validatorName
