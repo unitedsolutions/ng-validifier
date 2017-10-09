@@ -38,15 +38,11 @@ export default class {
   }
 
   pending(on) {
-    let timeout = on ? this.settings.asyncMinimumPendingDuration : 0;
-    
     if(!on) {
       this.classOperator('removeClass');
     }
     
     this.display('pending', on);
-    
-    return new Promise(resolve => setTimeout(resolve, timeout));  
   }
   
   success(on) {
