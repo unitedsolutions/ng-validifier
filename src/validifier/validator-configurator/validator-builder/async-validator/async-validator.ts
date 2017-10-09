@@ -27,6 +27,7 @@ export default (settings, control, configs, validatorDeclaration) => {
   requestsNullifier(control, validatorName, validationId);
   initialVisualizer(control, validatorName);
   
+  clearTimeout(errorConfigs.successTimeout);
   clearTimeout(errorConfigs.asyncDebounceTimeout);
   
   errorConfigs.asyncDebounceTimeout = setTimeout(() => {
@@ -37,15 +38,15 @@ export default (settings, control, configs, validatorDeclaration) => {
     asyncProgressVisualizer.pending(true);
     
     validator(control, configs.validator, configs.baseConfigs).then(async (validationStatus) => {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       if(errorConfigs.requests[validationId]) {
         return;
       }
 
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
       validationStatus = validationStatusNormalizer(settings, validationStatus);
       finalDataSetter(control, validatorDeclaration, validationStatus);
-      finalVisualizer(settings, control, validatorName, validationStatus);      
+      finalVisualizer(settings, errorConfigs, control, validatorName, validationStatus);      
     });
   }, settings.asyncDebounceTime);
   
