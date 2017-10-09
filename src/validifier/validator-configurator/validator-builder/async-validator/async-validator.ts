@@ -3,6 +3,7 @@ import validationStatusNormalizer from '../_lib/validation-status-normalizer';
 import initialDataSetter          from './initializer/initial-data-setter/initial-data-setter';
 import requestsNullifier          from './initializer/requests-nullifier/requests-nullifier';
 import initialVisualizer          from './initializer/initial-visualizer/initial-visualizer';
+import pauser                     from './finalizer/pauser/pauser';
 import finalDataSetter            from './finalizer/final-data-setter/final-data-setter';
 import finalVisualizer            from './finalizer/final-visualizer/final-visualizer';
 
@@ -35,10 +36,12 @@ export default (settings, control, configs, validatorDeclaration) => {
       return asyncProgressVisualizer.container(false);
     }
     
+    let time = _.now();
+    
     asyncProgressVisualizer.pending(true);
     
     validator(control, configs.validator, configs.baseConfigs).then(async (validationStatus) => {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await pauser(time, settings);
       
       if(errorConfigs.requests[validationId]) {
         return;
