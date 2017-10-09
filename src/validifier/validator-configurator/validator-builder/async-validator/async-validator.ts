@@ -29,12 +29,12 @@ export default (settings, control, configs, validatorDeclaration) => {
   
   clearTimeout(errorConfigs.asyncDebounceTimeout);
   
-  errorConfigs.asyncDebounceTimeout = setTimeout(() => {
+  errorConfigs.asyncDebounceTimeout = setTimeout(async () => {
     if(validify.sync) {
       return asyncProgressVisualizer.container(false);
     }
     
-    asyncProgressVisualizer.pending(true);
+    await asyncProgressVisualizer.pending(true);
     
     validator(control, configs.validator, configs.baseConfigs).then(validationStatus => {
       if(errorConfigs.requests[validationId]) {

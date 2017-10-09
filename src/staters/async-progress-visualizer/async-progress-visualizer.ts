@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 
 export default class {
-  private hiddenClass;
+  private settings;
   private asyncs;
   private $el;
   private $elContainer;
@@ -12,16 +12,12 @@ export default class {
     let {$el, $elContainer} = elements;
     let pendingClass = `${settings.prefix}-async-pending`;
     
-    _.extend(this, {
-      $el, $elContainer, asyncs, pendingClass,
-      hiddenClass: settings.asyncStatusHideClass
-    });
+    _.extend(this, {$el, $elContainer, asyncs, pendingClass, settings});
   }
   
   private display(type, on) {
     let method = on ? 'removeClass': 'addClass';
-    this.asyncs['$' + type][method](this.hiddenClass);
-    return this;
+    this.asyncs['$' + type][method](this.settings.asyncStatusHideClass);
   }
   
   private classOperator(operation) {
@@ -34,21 +30,30 @@ export default class {
     if(on) {
       this.classOperator('addClass');  
     } else {
-      this.pending(on).success(on);
+      this.pending(on);
+      this.success(on);
     }
     
-    return this.display('asyncsContainer', on);
+    this.display('asyncsContainer', on);
   }
-  
+
   pending(on) {
-    if(!on) {
-      this.classOperator('removeClass');
-    }
+    let timeout = on ? this.settings.asyncMinimumPendingDuration : 0;
     
-    return this.display('pending', on);
+    return new Promise(resolve => {
+      setTimeout(() => {
+        if(!on) {
+          this.classOperator('removeClass');
+        }
+        
+        this.display('pending', on);
+        
+        resolve();
+      }, timeout);  
+    });
   }
   
   success(on) {
-    return this.display('success', on);
+    this.display('success', on);
   }
 }
