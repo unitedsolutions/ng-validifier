@@ -1,4 +1,4 @@
-import * as $          from 'jquery';
+import $               from 'jquery';
 import * as _          from 'lodash';
 import classIdAssigner from '../../_lib/class-id-assigner';
 import containerAdder  from '../_lib/container-adder';

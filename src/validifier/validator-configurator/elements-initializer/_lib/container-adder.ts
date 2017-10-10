@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import $ from 'jquery';
 
 export default ($el, $container, $containerContainer, insertionSpec) => {
   let [action, $insertionPoint] = (() => {

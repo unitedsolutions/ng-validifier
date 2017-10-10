@@ -1,4 +1,4 @@
-import * as $           from 'jquery';
+import $                from 'jquery';
 import * as _           from 'lodash';
 import nameAssigner     from './name-assigner/name-assigner';
 import ValidationStater from '../../../staters/validation-stater/validation-stater';

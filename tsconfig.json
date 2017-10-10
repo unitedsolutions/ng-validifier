@@ -6,9 +6,15 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "declaration": false,
     "outDir": "./dist",
     "lib": ["es2015", "dom"]
   },
-  "files": ["./src/ng-validify"]
+  "files": ["./src/ng-validifier"],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "genDir": "dist"
+  }
 }

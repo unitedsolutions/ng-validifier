@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/validifier/_lib/prefixer.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,CAAC,MAAM,QAAQ,CAAC;AAE5B,eAAe,UAAC,QAAQ,EAAE,IAAI;IACvB,IAAA,wBAAM,CAAa;IAExB,EAAE,CAAA,CAAC,MAAM,IAAI,IAAI,CAAC,CAAC,CAAC;QAClB,IAAI,GAAG,MAAM,GAAG,CAAC,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC;IACrC,CAAC;IAED,MAAM,CAAC,IAAI,CAAC;AACd,CAAC,CAAC","file":"prefixer.js","sourceRoot":""}
