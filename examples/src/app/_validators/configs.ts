@@ -22,6 +22,8 @@ export default {
 
   asyncSuccessMessageDuration: 2000,
   
+  asyncMinimumPendingDuration: 1000,
+  
   validatorConfigs: {
     uniqueCheck: {
       baseUrl: 'http://localhost:12321'
