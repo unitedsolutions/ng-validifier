@@ -1,4 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
+import {HttpClientPlus}       from 'ng-http-client-plus';
 
 @Component({
   template: 
@@ -10,4 +11,11 @@ import {Component, ViewChild} from '@angular/core';
 })
 export default class { 
   @ViewChild('f') form;
+  
+  constructor(http: HttpClientPlus) {
+    http.init({
+      baseUrl: 'http://localhost:12321',
+      tokenName: 'auth-token'
+    });
+  }
 }

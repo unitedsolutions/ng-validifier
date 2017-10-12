@@ -19,7 +19,7 @@ module.exports = {
         allowJs: true,
         sourceMap: false,
         inlineSourceMap: true,
-        module: "commonjs",
+        module: 'commonjs',
         removeComments: true
       }
     }]

@@ -1,12 +1,12 @@
-import * as _                from 'lodash';
-import {TestBed}             from '@angular/core/testing';
-import {FormsModule}         from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
-import * as ngValidifierApi  from '../../dist/ng-validifier.umd.js';
-import asyncEmailValidator   from '../_validators/async-email';
-import configs               from './configs';
-import pause                 from './pause';
-import _valueSetter          from './value-setter';
+import * as _                 from 'lodash';
+import {TestBed}              from '@angular/core/testing';
+import {FormsModule}          from '@angular/forms';
+import {ReactiveFormsModule}  from '@angular/forms';
+import * as ngValidifierApi   from '../../dist/ng-validifier.umd.js';
+import asyncEmailValidator    from '../_validators/async-email';
+import configs                from './configs';
+import pause                  from './pause';
+import _valueSetter           from './value-setter';
 
 const {ngValidifier} = ngValidifierApi;
 
@@ -18,7 +18,7 @@ export default async (Component, _configs?, validators = []) => {
 
   TestBed.configureTestingModule({
     imports: [
-      FormsModule, 
+      FormsModule,
       ReactiveFormsModule, 
       ValidatorsModule
     ],

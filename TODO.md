@@ -1,5 +1,6 @@
 # TODOs
 
+* 10-10-2017: Put back chaining in asyncProgressVisualizer
 * 09-27-2017: Allow specifying specific native validators to include in a module
 * 08-17-2017: Implement in (vIn) validator
 * 08-03-2017: Refactor sync validation process tests
